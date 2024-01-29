@@ -6,11 +6,16 @@ using UnityEngine;
 public class PipeMiddleScript : MonoBehaviour
 {
     public LogicScript logic;
+    private BirdScript bird;
+    
+    
+    
     // Start is called before the first frame update
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic")
         .GetComponent<LogicScript>();
+        bird = GetComponent<BirdScript>();
     }
 
     // Update is called once per frame
@@ -25,4 +30,5 @@ public class PipeMiddleScript : MonoBehaviour
         }
        
     }
+   
 }
