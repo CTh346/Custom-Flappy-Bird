@@ -12,6 +12,10 @@ public class BirdScript : MonoBehaviour
     public LogicScript logic;
     public bool birdIsAlive = true;
 
+    public float dedZoneForBird = -11.5f;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,10 @@ public class BirdScript : MonoBehaviour
         {
             //May want to experiment with later
             myRigidBody2d.velocity = Vector2.up * flapStrenghth;
+        }
+        if(transform.position.y < dedZoneForBird || transform.position.y > 11.5){
+            birdIsAlive = false;
+            logic.gameOver();
         }
     }
      private void OnCollisionEnter2D(Collision2D collision){
