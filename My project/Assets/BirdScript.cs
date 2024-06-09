@@ -8,6 +8,7 @@ public class BirdScript : MonoBehaviour
 
 {   
     public Rigidbody2D myRigidBody2d;
+    public Animator animator;
     public float flapStrenghth; 
     public LogicScript logic;
     public bool birdIsAlive = true;
@@ -30,6 +31,8 @@ public class BirdScript : MonoBehaviour
         {
             //May want to experiment with later
             myRigidBody2d.velocity = Vector2.up * flapStrenghth;
+            animator.SetTrigger("Jump");
+            //animator.ResetTrigger("Jump");
         }
         if(transform.position.y < dedZoneForBird || transform.position.y > 11.5){
             birdIsAlive = false;

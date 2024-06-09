@@ -92,7 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logic: {fileID: 0}
   obj: {fileID: 0}
-  t: 0
 --- !u!1 &5102929751249289430
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +104,7 @@ GameObject:
   - component: {fileID: 6300011307289604844}
   m_Layer: 0
   m_Name: Pipe 2
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,8 +139,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a736983b3795545fda030290ef4a43e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hit: 1
   moveSpeed: 5
   deadZone: -20
+  upDown: 1
 --- !u!1 &6584885664920059172
 GameObject:
   m_ObjectHideFlags: 0

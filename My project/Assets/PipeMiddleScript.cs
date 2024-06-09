@@ -11,7 +11,7 @@ public class PipeMiddleScript : MonoBehaviour
     public GameObject obj; 
     
 
-    private bool t;
+    private bool birdAlive;
     
 
 
@@ -32,14 +32,17 @@ public class PipeMiddleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       t = obj.GetComponent<BirdScript>().birdIsAlive;
+       birdAlive = obj.GetComponent<BirdScript>().birdIsAlive;
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
         
-        if (collision.gameObject.layer == 3 && t){
+        if (collision.gameObject.layer == 3 && birdAlive){
              logic.addScore(1);
+             logic.checkTopScore();
+             
         } 
+        
        
     }
    
