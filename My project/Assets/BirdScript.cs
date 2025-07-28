@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Tilemaps;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEditor.Tilemaps;
 using UnityEngine;
 
 
@@ -29,10 +29,10 @@ public class BirdScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
         {
-            //May want to experiment with later
+            
             myRigidBody2d.velocity = Vector2.up * flapStrenghth;
             animator.SetTrigger("Jump");
-            //animator.ResetTrigger("Jump");
+            
         }
         if(transform.position.y < dedZoneForBird || transform.position.y > 11.5){
             birdIsAlive = false;

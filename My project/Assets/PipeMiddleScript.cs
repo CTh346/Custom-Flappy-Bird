@@ -8,7 +8,7 @@ public class PipeMiddleScript : MonoBehaviour
 {
     public LogicScript logic;
 
-    public GameObject obj; 
+    public BirdScript Birb; 
     
 
     private bool birdAlive;
@@ -23,7 +23,7 @@ public class PipeMiddleScript : MonoBehaviour
         logic = GameObject.FindGameObjectWithTag("Logic")
         .GetComponent<LogicScript>();
 
-        obj = GameObject.FindGameObjectWithTag("RedBird");
+        Birb = GameObject.FindGameObjectWithTag("RedBird").GetComponent<BirdScript>();
         
         
         
@@ -32,7 +32,8 @@ public class PipeMiddleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       birdAlive = obj.GetComponent<BirdScript>().birdIsAlive;
+        //Constantly checks if bird is alive from the bird script
+       birdAlive = Birb.GetComponent<BirdScript>().birdIsAlive; 
     }
 
     private void OnTriggerEnter2D(Collider2D collision){

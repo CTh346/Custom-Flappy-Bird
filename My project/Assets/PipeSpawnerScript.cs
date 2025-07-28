@@ -12,8 +12,6 @@ public class PipeSpawnerScript : MonoBehaviour
     //Note for spawnrates: Want to reach the spawnrate for the shiftin pipes first before the 
     // seconde spawn/spawnrate of the regular pipes; i.e. spawn rate =4 & cutOffShift = 7
     private float spawnRate = 2.5f;
-    private float shiftPipeSpawnRate = 6; // = (spawnRate *2) -1
-    private float timerSpecial = 0;
     private float timer = 0;
     public int heightOffset = 1; 
 

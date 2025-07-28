@@ -33,7 +33,6 @@ public class LogicScript : MonoBehaviour
 
          highestScoreText.text = "Highest Score: " + PlayerPrefs.GetInt("TopScore").ToString();
       }
-      //Debug.Log(PlayerPrefs.GetInt("TopScore"));
    }
 
   
@@ -41,8 +40,13 @@ public class LogicScript : MonoBehaviour
    public void restartGame(){
       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
    }
+   public void returnTitleScreen()
+   {
+      SceneManager.LoadScene(0);
+   }
 
-   public void gameOver(){
+   public void gameOver()
+   {
       gameOverScreen.SetActive(true);
    }
 
